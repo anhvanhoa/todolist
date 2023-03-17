@@ -55,9 +55,17 @@
   gap: 15px;
   padding: 15px;
   overflow: auto;
+  position: relative;
 }
 .list-todo::-webkit-scrollbar {
   display: none;
+}
+.list-todo .no-data {
+  color: #023047;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .list-todo-item {
   display: flex;

@@ -99,6 +99,9 @@ const valueTitle = document.querySelector('.add-todo input');
 let data = JSON.parse(localStorage.getItem('todo')) ? JSON.parse(localStorage.getItem('todo')) : [];
 function addItemTodo() {
     listTodo.innerHTML = '';
+    if (!data.length) {
+        listTodo.innerHTML = '<h2 class="no-data">There are no records yet!!!</h2>';
+    }
     data.forEach((element) => {
         const html = `
                     <div class="list-todo-item" draggable="true" data-id="${element.id}">
