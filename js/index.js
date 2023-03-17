@@ -196,6 +196,7 @@ function switchStatus() {
                 }
                 return element;
             });
+            data = newData;
             localStorage.setItem('todo', JSON.stringify(newData));
         };
     });
